@@ -1,0 +1,18 @@
+<div fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="32px">
+    <mat-card>
+        <mat-card-title>Escolha uma das opções abaixo:</mat-card-title>
+        <mat-card-content>
+            <mat-radio-group [(ngModel)]="abaSelecionada">
+                <mat-radio-button value="1">Lote</mat-radio-button>
+                <mat-radio-button value="2">Unitário</mat-radio-button>
+            </mat-radio-group>
+        </mat-card-content>
+    </mat-card>
+</div>
+
+<div fxLayout="column" *ngIf="abaSelecionada == 1">
+    <app-pagina-atual></app-pagina-atual>
+</div>
+<div fxLayout="column" fxLayoutAlign="center center"  *ngIf="abaSelecionada == 2">
+    <h2>Unitário ainda não disponível</h2>
+</div>
